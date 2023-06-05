@@ -7,10 +7,12 @@ public class simulationWindow {
 
         frame=new JFrame();
         frame.setTitle("Fourier Series");
-        frame.setSize(900,700);
+       // frame.setSize(900,700);
+
 
         panel=new simulationPanel();
         frame.add(panel);
+        frame.pack();
 
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
