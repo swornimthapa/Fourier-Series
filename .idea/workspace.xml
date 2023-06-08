@@ -7,6 +7,7 @@
     <list default="true" id="c1f3f9d5-0ac3-4ec2-9c54-c2f87f846ba4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulationPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulationWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,6 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Fourier_Series$Main.ic" NAME="Main Coverage Results" MODIFIED="1686211280440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Fourier_Series$Main.ic" NAME="Main Coverage Results" MODIFIED="1686240887017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

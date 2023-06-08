@@ -1,18 +1,29 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class simulationWindow {
     JFrame frame;
-    simulationPanel panel;
+   // simulationPanel panel;
+    ui ui=new ui();
     public simulationWindow(){
 
         frame=new JFrame();
         frame.setTitle("Fourier Series");
-       // frame.setSize(900,700);
+       // frame.setLayout(null);
 
+       // panel=new simulationPanel();
+//        frame.add(ui.slider);
+        frame.add(ui.topPanel,BorderLayout.NORTH);
 
-        panel=new simulationPanel();
-        frame.add(panel);
+        frame.add(ui.panel, BorderLayout.SOUTH);
         frame.pack();
+
+
+
+
+
+
+        frame.setResizable(false);
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

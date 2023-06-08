@@ -14,7 +14,10 @@ public class simulationPanel extends JPanel implements Runnable{
     int numberOFEpicircles=0;
     ArrayList<Integer> array= new ArrayList<Integer>();
     public simulationPanel(){
-            this.setPreferredSize(new Dimension(1500,500));
+
+
+           this.setPreferredSize(new Dimension(1500,500));
+           this.setLayout(null);
             this.setDoubleBuffered(true);
             this.setBackground(Color.BLACK);
             Thread thread=new Thread(this);
