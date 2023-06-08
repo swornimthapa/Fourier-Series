@@ -38,7 +38,7 @@ public class simulationPanel extends JPanel implements Runnable{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        numberOFEpicircles=20;
+        numberOFEpicircles=2;
       //  int preCircleX, preCircleY=0;
         int n=0;
         int preX=0,preY=0;
@@ -72,18 +72,20 @@ public class simulationPanel extends JPanel implements Runnable{
 
 
         }
+        int k=1000;
         array.add( (int) y);
          g2d.translate(-x,-y);
         int capacity=array.size();
-        g.drawLine((int) x, (int) y, (int) 200, (int) array.get(capacity-1));
-        g2d.translate(200,0);
+       // g2d.translate(200,0);
 
         for(int j=0;j<array.size();j++) {
-
-            g.drawOval((int) j, (int) array.get(j), 1, 1);
-
+            g.drawOval((int) k, (int) array.get(j), 1, 1);
+            k--;
 
         }
+        g.drawLine((int) x, (int) y, (int) k, (int) array.get(capacity-1));
+
+
 
 
         time=time+0.02;
