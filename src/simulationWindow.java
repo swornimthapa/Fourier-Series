@@ -13,7 +13,6 @@ public class simulationWindow {
         panel=new simulationPanel();
         frame.add(panel);
         frame.pack();
-
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
