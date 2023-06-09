@@ -7,17 +7,17 @@ import java.util.ArrayList;
 import static java.lang.Math.*;
 
 public class simulationPanel extends JPanel implements Runnable{
-    int circleX=0 , circleY=0;
 
     double time=0;
     double frames=120;
     int numberOFEpicircles=0;
+    ui ui;
     ArrayList<Integer> array= new ArrayList<Integer>();
-    public simulationPanel(){
+    public simulationPanel(ui ui){
 
-
-           this.setPreferredSize(new Dimension(1500,500));
-           this.setLayout(null);
+            this.ui=ui;
+            this.setPreferredSize(new Dimension(1500,500));
+            //this.setLayout(null);
             this.setDoubleBuffered(true);
             this.setBackground(Color.BLACK);
             Thread thread=new Thread(this);
@@ -31,19 +31,19 @@ public class simulationPanel extends JPanel implements Runnable{
     protected void paintComponent(Graphics g) {
 
             super.paintComponent(g);
-            numberOFEpicircles = 100;
+            numberOFEpicircles =ui.sliderValue;
             int preCircleX = 0, preCircleY = 0;
             int n = 0;
             double x = 0, y = 0;
             int radius = 0;
-            preCircleX = circleX;
-            preCircleY = circleY;
             Graphics2D g2d = (Graphics2D) g;
             g2d.translate(300, 250);
             g2d.addRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
 
             for (int i = 0; i < numberOFEpicircles; i++) {
 
+                preCircleX = (int) x;
+                preCircleY = (int) y;
                 n = i * 2 + 1;
                 radius = (int) (80 * (4 / (n * PI)));
 
@@ -54,8 +54,7 @@ public class simulationPanel extends JPanel implements Runnable{
                 g.setColor(Color.magenta);
                 g.drawLine((int) (preCircleX), (int) (preCircleY), (int) x, (int) y);
 
-                preCircleX = (int) x;
-                preCircleY = (int) y;
+
 
 
             }

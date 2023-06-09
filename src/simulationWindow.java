@@ -11,16 +11,10 @@ public class simulationWindow {
         frame.setTitle("Fourier Series");
        // frame.setLayout(null);
 
-       // panel=new simulationPanel();
-//        frame.add(ui.slider);
-        frame.add(ui.topPanel,BorderLayout.NORTH);
 
+        frame.add(ui.topPanel,BorderLayout.NORTH);
         frame.add(ui.panel, BorderLayout.SOUTH);
         frame.pack();
-
-
-
-
 
 
         frame.setResizable(false);
