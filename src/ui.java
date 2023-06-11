@@ -39,7 +39,7 @@ public class ui implements ChangeListener, ActionListener {
         slider.addChangeListener(this);
         slider.setValue(1);
 
-        String[] waveNames={"square wave","sawtooth wave"};
+        String[] waveNames={"square wave","sawtooth wave","triangle wave"};
         waves=new JComboBox(waveNames);
         waves.setBounds(250,28,400,30);
         waves.setFont(new Font("Apple Casual",Font.PLAIN,15));

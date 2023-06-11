@@ -37,6 +37,7 @@ public class simulationPanel extends JPanel implements Runnable{
             int n = 0;
             double x = 0, y = 0;
             int radius = 0;
+           // int sign=1;
             Graphics2D g2d = (Graphics2D) g;
             g2d.translate(300, 250);
             g2d.addRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
@@ -48,8 +49,7 @@ public class simulationPanel extends JPanel implements Runnable{
                     case "square wave":
                         n = i * 2 + 1;
                         radius = (int) (80 * (4 / (n * PI)));
-                        x += (radius * cos(n * time));
-                        y += (radius * sin(n * time));
+
                         break;
                     case "sawtooth wave":
                         n=i+1;
@@ -58,11 +58,24 @@ public class simulationPanel extends JPanel implements Runnable{
                         }else{
                             radius= (int) (100*(2/(n*PI)));
                         }
-                        x += (radius * cos(n * time));
-                        y += (radius * sin(n * time));
+
+                        break;
+                    case "triangle wave":
+                        n = i * 2 + 1;
+                        if((i+1)%2==0){
+
+                            radius= (int) (100*(8/((PI*PI)*-(n*n))));
+                        }
+                        else {
+                            radius= (int) (100*(8/((PI*PI)*(n*n))));
+                        }
+
+                        break;
                     default:
                         break;
                 }
+                x += (radius * cos(n * time));
+                y += (radius * sin(n * time));
                 radius=Math.abs(radius);
                 g.setColor(Color.white.darker().darker().darker());
                 g.drawOval((int) preCircleX - radius, (int) preCircleY - radius, radius * 2, radius * 2);
